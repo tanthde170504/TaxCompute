@@ -1,5 +1,10 @@
+package controller;
 
-import java.util.Scanner;
+import common.Library;
+import model.BroSis;
+import model.Children;
+import model.Parent;
+import model.Person;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -9,84 +14,11 @@ import java.util.Scanner;
  *
  * @author PC
  */
-class BroSis {
 
-    private double salary;
 
-    public BroSis(double salary) {
-        this.salary = salary;
-    }
 
-    public double getSalary() {
-        return salary;
-    }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-}
 
-class Children {
-
-    private int age;
-    private boolean school;
-
-    public Children(int age, boolean school) {
-        this.age = age;
-        this.school = school;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isSchool() {
-        return school;
-    }
-
-    public void setSchool(boolean school) {
-        this.school = school;
-    }
-    
-}
-
-class Parent {
-    private int age;
-    private boolean gender;
-
-    public Parent(int age, boolean gender) {
-        this.age = age;
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isGender() {
-        return gender;
-    }
-
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
-
-    @Override
-    public String toString() {
-        return "Parent{" +
-                "age=" + age +
-                ", gender=" + gender +
-                '}';
-    }
-}
 
 public class TaxCompute {
 
@@ -224,20 +156,21 @@ public class TaxCompute {
         System.out.println("Số thuế phải nộp là : "+value2);
     }
 
-    public static void main(String[] args) {
-        TaxCompute taxCompute = new TaxCompute();
+
+
+    public void run(){
         while(true){
-            taxCompute.display();
+            display();
 
             System.out.print("Countinue or stop: ");
-            boolean check = taxCompute.library.checkInputYN();
+            boolean check = library.checkInputYN();
             if(!check){
                 break;
             }
         }
         System.out.println("Program stop");
 
-    }
 
+    }
 }
 
